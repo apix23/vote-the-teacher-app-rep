@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote the Teacher app</title>
+  </head>
+  <body>
+    <main>
+      <h1>Vote the teacher!</h1>
+      <h3>Total votes so far: <span></span></h3>
+
+      <div class="voting-container">
+        <form action="">
+          <input
+            type="number"
+            step="0.000001"
+            name="inputPunctuation"
+            placeholder="Put your punctuation here"
+          />
+        </form>
+
+        <img class="reactionImg" src="images/smartFrog.png" alt="" />
+      </div>
+
+      <p class="img-message">Not so clever Mr!</p>
+
+      <div class="punctuation">
+        <div class="star-ratings">
+          <div class="fill-ratings" style="width: 0%">
+            <span>★★★★★</span>
+          </div>
+          <div class="empty-ratings">
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+        <p id="punctuation"></p>
+      </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDYUwDJncalxzUo2bpumUT7mkh9Xpju4fc",
+        authDomain: "vote-the-teacher.firebaseapp.com",
+        databaseURL:
+          "https://vote-the-teacher-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "vote-the-teacher",
+        storageBucket: "vote-the-teacher.appspot.com",
+        messagingSenderId: "538475865757",
+        appId: "1:538475865757:web:76863495fcb5f335245674",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
